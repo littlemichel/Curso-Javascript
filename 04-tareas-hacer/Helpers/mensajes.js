@@ -1,6 +1,6 @@
 require('colors');
 
-function mostrarMenu() {
+const mostrarMenu = () => {
 
     console.clear();
     console.log('----------------------------------'.green);
@@ -23,7 +23,7 @@ function mostrarMenu() {
     readline.question('Seleccione una opción: ', (opt) => {
         console.log({ opt });
         readline.close();
-    });
+    })
 
 }
 
