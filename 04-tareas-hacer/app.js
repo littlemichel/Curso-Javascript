@@ -6,9 +6,18 @@ console.clear();
 
 const main = async() => {
     console.log('Hola Mundo');
-    ahre = mostrarMenu();
+    mostrarMenu();
 
-    pausa();
+    let opt = '';
+
+    /*
+    do {
+        mostrarMenu();
+    } while (opt !== '0');
+    */
+
+
+    //pausa();
 }
 
 main();
