@@ -8,17 +8,20 @@
 //     console.log('Hola mundo');
 // }, 1000 );
 
-const getUsuarioByID = ( id ) => {
+const getUsuarioByID = ( id, callback ) => {
     const usuario = {
         id, //este id utilizara el parametro de la funcion
         nombre: 'Fernando'
     }
 
     setTimeout( () => {
-        console.log(usuario)
-    }, 1500)
+        callback(usuario)
+    }, 1500 )
 }
 
-getUsuarioByID( 10, () => {
-    console.log('Hola mundo')
+getUsuarioByID( 10, (usuario) => {
+    console.log(usuario.id);
+    console.log(usuario.nombre);
 });
+
+
