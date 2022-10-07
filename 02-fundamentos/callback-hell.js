@@ -42,24 +42,10 @@ const getSalario = ( id ) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const getEmpleado = (id) => {
-    const empleado = empleados.find( (e) =>{
+    const empleado = empleados.find( (e) => {
         return e.id === id
     })
 }
+
+console.log( getEmpleado( 1 ) );
