@@ -1,3 +1,4 @@
+// Variable asociada a una lista com objetos
 const empleados = [
     {
         id: 1,
@@ -12,9 +13,7 @@ const empleados = [
         nombre: "El Pepe"
     }
 ];
-
-
-
+// Variable asociada a una lista com objetos
 const salarios = [
     {
         id:1,
@@ -29,26 +28,40 @@ const salarios = [
         salario:1500
     }
 ];
-
-9
-const getEmpleado = (id) => {
+//Funcion para obtener el empleado, verificar existencia del empleado y retornar empleado o error
+const getEmpleado = (id, callback ) => {
     const empleado = empleados.find( e => e.id === id)
-    return empleado;
+    if (empleado){
+        callback (null, empleado);
+    } else {
+        callback (`El empleado con id ${ id } no existe`);
+    }    
 };
-
-
+//Funcion para obtener el salario, verificar existencia del salario y retornar salario o error
 const getSalario = ( id, callback ) => {
     const salario = salarios.find( e => e.id === id)
-    
     if ( salario ) {
-        callback(salario);
+        callback(null, salario);
     } else {
         callback(`Salario con id ${ id } no existe`);
     }    
 };
-
-getSalario (10, (salario) => {
+//Funcion para imprimir los resultados de la anterior funcion, sea un error o um resultado
+getSalario (1, (err, salario) => {
+    if (err) {
+        console.log('ERROR');
+        return console.log(err);
+    }
+    console.log('Salario existe');
     console.log(salario);
 });
 
-//console.log(getSalario(10, salario));
+//Funcion para imprimir los resultados de la anterior funcion, sea un error o um resultado
+getEmpleado (1, (err, empleado) => {
+    if (err) {
+        console.log('ERRO');
+        return console.log(err);
+    }
+    console.log('Existe Empleado');
+    console.log(empleado);
+});
