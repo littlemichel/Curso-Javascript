@@ -22,10 +22,6 @@ const salarios = [
     {
         id:2,
         salario:1000
-    },
-    {
-        id:3,
-        salario:1500
     }
 ];
 //Funcion para obtener el empleado, verificar existencia del empleado y retornar empleado o error
@@ -46,22 +42,28 @@ const getSalario = ( id, callback ) => {
         callback(`Salario con id ${ id } no existe`);
     }    
 };
-//Funcion para imprimir los resultados de la anterior funcion, sea un error o um resultado
-getSalario (1, (err, salario) => {
-    if (err) {
-        console.log('ERROR');
-        return console.log(err);
-    }
-    console.log('Salario existe');
-    console.log(salario);
-});
 
+
+const id = 3;
 //Funcion para imprimir los resultados de la anterior funcion, sea un error o um resultado
-getEmpleado (1, (err, empleado) => {
+getEmpleado (id, (err, empleado) => {
     if (err) {
         console.log('ERRO');
         return console.log(err);
     }
     console.log('Existe Empleado');
     console.log(empleado);
+    
+    //Funcion para imprimir los resultados de la anterior funcion, sea un error o um resultado
+    getSalario (id, (err, salario) => {
+        if (err) {
+            console.log('ERROR');
+            return console.log(err);
+        }
+        console.log('Salario existe');
+        console.log(salario);
+    });
 });
+
+
+
