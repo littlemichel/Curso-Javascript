@@ -43,25 +43,9 @@ const getSalario = ( id, callback ) => {
     }
 };
 
-//const id = 2;
-//const id = 3;
-const id = 10;
-//Funcion para imprimir los resultados de la anterior funcion, sea un error o um resultado
-getEmpleado (id,  (err, empleado) => {
-    if (err) {
-        console.log('ERRO');
-        return console.log(err);
-    };
-    
-    //Funcion para imprimir los resultados de la anterior funcion, sea un error o um resultado
-    getSalario (id, (err, salario) => {
-        if (err) {
-            console.log('ERROR');
-            return console.log(err);
-        }
-        console.log('El empleado', empleado.nombre, 'tiene un salario de:', salario.salario);
-    });
-});
+
+get
+
 
 
 
