@@ -26,25 +26,20 @@ const salarios = [
 ];
 //Funcion para obtener el empleado, verificar existencia del empleado y retornar empleado o error
 const getEmpleado = (id, callback ) => {
+
     const empleado = empleados.find( e => e.id === id)
-    if (empleado){
-        callback (null, empleado);
-    } else {
-        callback (`El empleado con id ${ id } no existe`);
-    };
-};
-//Funcion para obtener el salario, verificar existencia del salario y retornar salario o error
-const getSalario = ( id, callback ) => {
-    const salario = salarios.find( e => e.id === id)?.salario;
-    if ( salario ) {
-        callback(null, salario);
-    } else {
-        callback(`Salario con id ${ id } no existe`);
-    }
-};
+        //Las promesas sirven para ordenar las funciones
+        const promesa = new Promise((resolve, reject) => {
+        if (empleado) {
+            resolve(empleado);
+        } else {
+            reject()
+        }};
+}; 
 
 
-get
+getEmpleado(id)
+    .then ( empleado => console.log(empleado));
 
 
 
