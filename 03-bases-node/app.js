@@ -1,3 +1,17 @@
+
+
+
+
+console.clear();
+console.log('========================')
+console.log('      Tabla del 5')
+console.log('========================')
+
+
+
+
+
+
 // imprimir la tabla del 5
 //i++ va sumando un numero al valor
 // Esta funciona tiene dentro la misma contruccion de variable

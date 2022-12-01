@@ -34,8 +34,8 @@ const getEmpleado = (id, callback ) => {
             resolve(empleado);
         } else {
             reject()
-        }};
-}; 
+        }});
+} 
 
 
 getEmpleado(id)
